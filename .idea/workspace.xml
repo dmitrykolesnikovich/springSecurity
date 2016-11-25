@@ -23,8 +23,9 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ea4125f-7b88-44fd-a6f0-40f5edf1b89a" name="Default" comment="">
+    <list default="true" id="8ea4125f-7b88-44fd-a6f0-40f5edf1b89a" name="Default" comment="test">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java" afterPath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java" />
     </list>
     <ignored path="springSecurity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +64,8 @@
       <file leaf-file-name="AppController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="218" column="69" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="69" />
+            <state relative-caret-position="399">
+              <caret line="219" column="32" selection-start-line="219" selection-start-column="32" selection-end-line="219" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -815,7 +816,7 @@
       <workItem from="1479368670627" duration="3394000" />
       <workItem from="1479376516156" duration="77000" />
       <workItem from="1479453754225" duration="174000" />
-      <workItem from="1480072422934" duration="760000" />
+      <workItem from="1480072422934" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1479291916113</created>
@@ -831,11 +832,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480077660604</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug fix">
+      <created>1480077751803</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480077751803</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14140000" />
+    <option name="totallyTimeSpent" value="14379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1060" extended-state="6" />
@@ -890,7 +898,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="push bug intentionally" />
-    <option name="LAST_COMMIT_MESSAGE" value="push bug intentionally" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1344,8 +1353,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="218" column="69" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="69" />
+        <state relative-caret-position="399">
+          <caret line="219" column="32" selection-start-line="219" selection-start-column="32" selection-end-line="219" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
