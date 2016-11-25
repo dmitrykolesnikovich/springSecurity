@@ -218,6 +218,7 @@ public class AppController {
             persistentTokenBasedRememberMeServices.logout(request, response, auth);
             SecurityContextHolder.getContext().setAuthentication(null);
             System.out.println("test teamcity trigger");
+            System.out.println("test build chain");
         }
         return "redirect:/login?logout";
     }
