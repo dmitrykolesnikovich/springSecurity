@@ -23,7 +23,7 @@ public class LoginPageTest {
     @Before
     public void beforeTest() {
         WebDriverFactory.startBrowser(true);
-        TimeUtils.waitForSeconds(2);
+        TimeUtils.waitForSeconds(9);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class LoginPageTest {
 
     @After
     public void afterTest() {
-        TimeUtils.waitForSeconds(2);
+        TimeUtils.waitForSeconds(9);
         WebDriverFactory.finishBrowser();
     }
 
