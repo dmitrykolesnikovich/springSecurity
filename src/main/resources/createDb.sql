@@ -1,3 +1,6 @@
+create schema websystique;
+use websystique;
+
 /*All User's gets stored in APP_USER table*/
 create table APP_USER (
    id BIGINT NOT NULL AUTO_INCREMENT,
