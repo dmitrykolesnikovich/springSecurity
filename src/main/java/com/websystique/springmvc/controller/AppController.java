@@ -3,10 +3,14 @@ package com.websystique.springmvc.controller;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import com.websystique.springmvc.security.CustomUserDetailsService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
@@ -35,6 +39,8 @@ import com.websystique.springmvc.service.UserService;
 @SessionAttributes("roles")
 public class AppController {
 
+    static final Logger logger = LoggerFactory.getLogger(AppController.class);
+
     @Autowired
     UserService userService;
 
@@ -56,6 +62,7 @@ public class AppController {
      */
     @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
+        logThread("listUsers");
 
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
@@ -68,6 +75,8 @@ public class AppController {
      */
     @RequestMapping(value = {"/newuser"}, method = RequestMethod.GET)
     public String newUser(ModelMap model) {
+        logThread("newUser");
+
         User user = new User();
         model.addAttribute("user", user);
         model.addAttribute("edit", false);
@@ -82,6 +91,7 @@ public class AppController {
     @RequestMapping(value = {"/newuser"}, method = RequestMethod.POST)
     public String saveUser(@Valid User user, BindingResult result,
                            ModelMap model) {
+        logThread("saveUser");
 
         if (result.hasErrors()) {
             return "registration";
@@ -115,6 +125,7 @@ public class AppController {
      */
     @RequestMapping(value = {"/edit-user-{ssoId}"}, method = RequestMethod.GET)
     public String editUser(@PathVariable String ssoId, ModelMap model) {
+        logThread("editUser");
         User user = userService.findBySSO(ssoId);
         model.addAttribute("user", user);
         model.addAttribute("edit", true);
@@ -129,13 +140,13 @@ public class AppController {
     @RequestMapping(value = {"/edit-user-{ssoId}"}, method = RequestMethod.POST)
     public String updateUser(@Valid User user, BindingResult result,
                              ModelMap model, @PathVariable String ssoId) {
-
+        logThread("updateUser");
         if (result.hasErrors()) {
             return "registration";
         }
 
 		/*//Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
-		if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
+        if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
 			FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
 		    result.addError(ssoError);
 			return "registration";
@@ -155,6 +166,7 @@ public class AppController {
      */
     @RequestMapping(value = {"/delete-user-{ssoId}"}, method = RequestMethod.GET)
     public String deleteUser(@PathVariable String ssoId) {
+        logThread("deleteUser");
         userService.deleteUserBySSO(ssoId);
         return "redirect:/list";
     }
@@ -165,6 +177,7 @@ public class AppController {
      */
     @ModelAttribute("roles")
     public List<UserProfile> initializeProfiles() {
+        logThread("initializeProfiles");
         return userProfileService.findAll();
     }
 
@@ -173,6 +186,7 @@ public class AppController {
      */
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
+        logThread("accessDeniedPage");
         model.addAttribute("loggedinuser", getPrincipal());
         return "accessDenied";
     }
@@ -183,6 +197,7 @@ public class AppController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {
+        logThread("loginPage");
         if (isCurrentAuthenticationAnonymous()) {
             return "login";
         } else {
@@ -196,11 +211,12 @@ public class AppController {
      */
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
+        logThread("logoutPage");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
             //new SecurityContextLogoutHandler().logout(request, response, auth);
             persistentTokenBasedRememberMeServices.logout(request, response, auth);
-            SecurityContextHolder.getContext().setAuthentication(null);
+            SecurityContextHolder.getContext().setAuthentication();
         }
         return "redirect:/login?logout";
     }
@@ -225,6 +241,11 @@ public class AppController {
     private boolean isCurrentAuthenticationAnonymous() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return authenticationTrustResolver.isAnonymous(authentication);
+    }
+
+    /**/
+    private void logThread(String TAG) {
+        logger.info("[" + TAG + "]" + getPrincipal() + ":" + Thread.currentThread().toString());
     }
 
 }
