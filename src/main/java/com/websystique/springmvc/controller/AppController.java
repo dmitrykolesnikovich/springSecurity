@@ -216,7 +216,7 @@ public class AppController {
         if (auth != null) {
             //new SecurityContextLogoutHandler().logout(request, response, auth);
             persistentTokenBasedRememberMeServices.logout(request, response, auth);
-            SecurityContextHolder.getContext().setAuthentication();
+            SecurityContextHolder.getContext().setAuthentication(null);
         }
         return "redirect:/login?logout";
     }

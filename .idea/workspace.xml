@@ -23,14 +23,8 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ea4125f-7b88-44fd-a6f0-40f5edf1b89a" name="Default" comment="initial commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_springsource_org_apache_catalina_sources_6_0_16.xml" />
+    <list default="true" id="8ea4125f-7b88-44fd-a6f0-40f5edf1b89a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springSecurity.iml" afterPath="$PROJECT_DIR$/springSecurity.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/configuration/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/configuration/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java" afterPath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/security/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/websystique/springmvc/security/SecurityConfiguration.java" />
     </list>
     <ignored path="springSecurity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="218" column="65" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="65" />
+              <caret line="218" column="69" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -821,7 +815,7 @@
       <workItem from="1479368670627" duration="3394000" />
       <workItem from="1479376516156" duration="77000" />
       <workItem from="1479453754225" duration="174000" />
-      <workItem from="1480072422934" duration="651000" />
+      <workItem from="1480072422934" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1479291916113</created>
@@ -830,11 +824,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479291916113</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="push bug intentionally">
+      <created>1480077660604</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480077660604</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14031000" />
+    <option name="totallyTimeSpent" value="14140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1060" extended-state="6" />
@@ -888,7 +889,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="push bug intentionally" />
+    <option name="LAST_COMMIT_MESSAGE" value="push bug intentionally" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1343,7 +1345,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="218" column="65" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="65" />
+          <caret line="218" column="69" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
