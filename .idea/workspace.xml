@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="220" column="32" selection-start-line="220" selection-start-column="32" selection-end-line="220" selection-end-column="48" />
+              <caret line="220" column="55" selection-start-line="220" selection-start-column="55" selection-end-line="220" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -816,7 +816,7 @@
       <workItem from="1479368670627" duration="3394000" />
       <workItem from="1479376516156" duration="77000" />
       <workItem from="1479453754225" duration="174000" />
-      <workItem from="1480072422934" duration="2492000" />
+      <workItem from="1480072422934" duration="2667000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1479291916113</created>
@@ -846,11 +846,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480077985727</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test build chain">
+      <created>1480079737136</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1480079737136</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15872000" />
+    <option name="totallyTimeSpent" value="16047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1060" extended-state="6" />
@@ -907,7 +914,8 @@
     <MESSAGE value="push bug intentionally" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="test teamcity trigger" />
-    <option name="LAST_COMMIT_MESSAGE" value="test teamcity trigger" />
+    <MESSAGE value="test build chain" />
+    <option name="LAST_COMMIT_MESSAGE" value="test build chain" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1362,7 +1370,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/websystique/springmvc/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="220" column="32" selection-start-line="220" selection-start-column="32" selection-end-line="220" selection-end-column="48" />
+          <caret line="220" column="55" selection-start-line="220" selection-start-column="55" selection-end-line="220" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
