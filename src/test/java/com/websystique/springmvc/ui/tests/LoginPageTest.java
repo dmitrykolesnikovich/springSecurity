@@ -33,6 +33,7 @@ public class LoginPageTest {
         loginPage.setPassword("admin");
         loginPage.login();
         assertEquals("Login page", loginPage.getTitle());
+        System.out.println("MASTER");
     }
 
     @After
