@@ -28,11 +28,11 @@ public class LoginPageTest {
 
     @Test
     public void testChat() {
-        loginPage = new LoginPage();
+        /*loginPage = new LoginPage();
         loginPage.setUsername("admin");
         loginPage.setPassword("admin");
         loginPage.login();
-        assertEquals("Login page", loginPage.getTitle());
+        assertEquals("Login page", loginPage.getTitle());*/
         System.out.println("DEV");
     }
 
